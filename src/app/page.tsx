@@ -40,7 +40,7 @@ export default function App() {
   ];
 
   const LogoutButton = () => (
-    <StyledButton onClick={() => setRole("")}>Logout</StyledButton>
+    <StyledButton onClick={() => setRole("")}>Back</StyledButton>
   );
 
   if (loading) {
@@ -54,8 +54,8 @@ export default function App() {
   if (!role) {
     return (
       <div className="min-h-screen bg-base-200 text-base-content flex flex-col items-center justify-center gap-4">
-        <h1 className="text-4xl font-bold">Welcome</h1>
-        <p className="text-base-content/60">Select your role to continue</p>
+        <h1 className="text-4xl font-bold">Login</h1>
+        <p className="text-base-content/60">Simulate user role</p>
         <div className="flex flex-wrap justify-center gap-2">
           {roles.map(({ label, value }) => (
             <StyledButton key={value} onClick={() => setRole(value)}>
